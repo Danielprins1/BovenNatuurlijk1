@@ -1,56 +1,218 @@
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: bisque;
+    justify-content:end;
+    align-items:center;
+    padding-top: 10px;
+    padding-left: 200px;
+    position: relative;
+
   }
   
   nav img {
     order: -1; 
     max-width: 30px;
+    position: fixed;
+    left: 10px;
   }
   
   nav a {
-    text-decoration: none;
-    color: #333;
-    margin-left: 15px;
+    margin-right: 10px;
+    width: 80px;
+    padding-left: 10px;
+    color: aliceblue;
+    text-align: right;
   }
 
   nav :hover{
     color: blue;
   }
 
-body{
+
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(129, 193, 114);
+    font-family: oswald;
 }
 
 img{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
     width: 350px;
 }
 
 .achtergrond-home{
-    position:sticky;
-    z-index: -10;
-    width: 500px;
-    opacity: 50%;
+    z-index: -1;
+    top:0;
+    position:absolute;
+    width: 175%;
+    filter: brightness(0.30);
+}
+
+.v-pijltje {
+  position: absolute;
+  top: 65%;
+  bottom: 100px;
+  left: 65%;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes spring-down {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .v-pijltje{
-    margin-top: -90px;
-    width: 100px;
+    animation: spring-down 1s infinite;
+  } 
+
+ 
+  .logo-home {
+    opacity: 0;
+    animation: fade-in 2s;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .logo-home {
+    opacity: 100%;
+    padding-top: 80px;
+    padding-left: 35%;
+    width: 450px;
+  }
+  
+  .homepagina h1 {
+    opacity: 0;
+    animation: fade-in 0.8s;
+    padding-top: 70px;
+    padding-left: 50px;
+  }
+  
+  .homepagina p {
+    opacity: 0;
+    animation: fade-in 1.4s;
+    padding-left: 100px;
+    opacity: 100%;
+    width: 400px;
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+
+
+.homepagina h1{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  opacity: 100%;
 }
 
-.logo-home{
-    margin-top: -100px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: nowrap; /* Prevent wrapping onto the next line */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  margin: 20px 0;
+  padding-left: 140px;
 }
 
+.image-container {
+  flex: 0 1 calc (25% - 15px);
+  margin: 5px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 80px;
+}
 
-/* img[src="gehele-"] {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px; 
-  } */
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.image-container p {
+  margin-top: 10px;
+}
+
+.doemeepagina body {
+  text-align: center;
+}
+
+.doemeepagina h1, p {
+  text-align: left;
+  margin: 0; /* Remove default margins */
+}
+
+.content {
+  max-width: 600px; /* Adjust the value to your desired width */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 100px; /* Add some left margin */
+}
+
+.intro {
+  
+  text-align: center;
+}
+
+.steps {
+  width: 100%; /* Full width for the steps section */
+}
+
+.step {
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.step h2 {
+  padding: 10px;
+  margin: 0;
+  background-color: #333;
+  color: white;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.step img {
+  max-width: 100%;
+  margin: 0 auto; /* Center the image horizontally */
+  order: 2; /* Move the image to the right */
+}
+
+.step p {
+  margin-top: 10px; /* Add some space between the image and text */
+  order: 1; /* Move the text to the left */
+}
