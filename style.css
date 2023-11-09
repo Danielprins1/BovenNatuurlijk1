@@ -1,63 +1,73 @@
 nav {
-    display: flex;
-    justify-content:end;
-    align-items:center;
-    padding-top: 10px;
-    padding-left: 200px;
-    position: relative;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  box-shadow: #000000;
+  background-color: #4CAF50;
+  padding: 10px;
+}
 
-  }
-  
-  nav img {
-    order: -1; 
-    max-width: 30px;
-    position: fixed;
-    left: 10px;
-  }
-  
-  nav a {
-    margin-right: 10px;
-    width: 80px;
-    padding-left: 10px;
-    color: aliceblue;
-    text-align: right;
-  }
+nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
 
-  nav :hover{
-    color: blue;
-  }
+
+nav a:hover {
+  background-color: #34495e;
+  color: #ffffff;
+}
+
+nav img {
+  max-width: 35px;
+}
 
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(129, 193, 114);
-    font-family: oswald;
-}
-
-img{
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-    width: 350px;
+  background-color: rgb(129, 193, 114);
+  margin: 8px;
+  padding-right: 20px;
+  padding-left: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 .achtergrond-home{
-    z-index: -1;
-    top:0;
-    position:absolute;
-    width: 175%;
-    filter: brightness(0.30);
+  padding-top: 50px;
+  z-index: -2;
+  top:0;
+  position:absolute;
+  width: 130%;
+  margin-right: 100px;
+  filter: brightness(0.30);
 }
 
 .v-pijltje {
   position: absolute;
-  top: 65%;
+  top: 45%;
   bottom: 100px;
-  left: 65%;
+  left: 45%;
   width: 50px;
   height: 50px;
+  animation: spring-down 1s infinite;
+  z-index: -1;
 }
 
 @keyframes spring-down {
@@ -72,14 +82,11 @@ img{
   }
 }
 
-.v-pijltje{
-    animation: spring-down 1s infinite;
-  } 
-
- 
   .logo-home {
-    opacity: 0;
     animation: fade-in 2s;
+    opacity: 100%;
+    width: 100%;
+    padding-top: 100px;
   }
   
   @keyframes fade-in {
@@ -91,70 +98,65 @@ img{
     }
   }
 
-  .logo-home {
-    opacity: 100%;
-    padding-top: 80px;
-    padding-left: 35%;
-    width: 450px;
-  }
   
   .homepagina h1 {
     opacity: 0;
     animation: fade-in 0.8s;
-    padding-top: 70px;
-    padding-left: 50px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+   padding-top: 60px;
+    opacity: 100%;
+    margin: 8px;
   }
   
   .homepagina p {
-    opacity: 0;
     animation: fade-in 1.4s;
-    padding-left: 100px;
     opacity: 100%;
-    width: 400px;
-    padding-top: 0px;
-    padding-bottom: 50px;
+    width: 100%;
+    padding-bottom: 50px;;
+    margin-left: 20px;
+    margin: 8px;
   }
 
 
-.homepagina h1{
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 50px;
-  opacity: 100%;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-wrap: nowrap; /* Prevent wrapping onto the next line */
-  overflow-x: auto; /* Enable horizontal scrolling if needed */
-  margin: 20px 0;
-  padding-left: 140px;
-}
-
-.image-container {
-  flex: 0 1 calc (25% - 15px);
-  margin: 5px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-width: 80px;
-}
-
-.image-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.image-container p {
-  margin-top: 10px;
-}
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 20px 0;
+  }
+  
+  .image-container {
+    margin: 5px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 100px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .image-container img {
+    max-width: 210%;
+    margin-left: -20px;
+    margin-bottom: -25px;
+    height: auto;
+  }
+  
+  .image-container p {
+    margin-top: 10px;
+    font-size: 12px; 
+  }
 
 .doemeepagina body {
   text-align: center;
@@ -162,57 +164,158 @@ img{
 
 .doemeepagina h1, p {
   text-align: left;
-  margin: 0; /* Remove default margins */
+  margin: 0; 
 }
 
-.content {
-  max-width: 600px; /* Adjust the value to your desired width */
+.inhoud {
+  max-width: 900px; 
+  margin: 0 auto;
   padding: 10px;
+  padding-top: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-left: 100px; /* Add some left margin */
+  margin-left: 20px; 
 }
 
 .intro {
-  
   text-align: center;
+  width: 100%;
+  padding-bottom: 50px;
 }
 
-.steps {
-  width: 100%; /* Full width for the steps section */
+.intro h1{
+  color: #006736;
 }
 
-.step {
-  background-color: white;
+
+.stap {
+  background-color: 006736;
   border-radius: 25px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 8px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   overflow: hidden;
 }
 
-.step h2 {
+.stap h2 {
   padding: 10px;
   margin: 0;
-  background-color: #333;
-  color: white;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  background-color: #db6464;
+  color: rgb(255, 255, 255);
 }
 
-.step-content {
+.stap-inhoud {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
 
-.step img {
+.stap img {
   max-width: 100%;
   margin: 0 auto; /* Center the image horizontally */
-  order: 2; /* Move the image to the right */
 }
 
-.step p {
-  margin-top: 10px; /* Add some space between the image and text */
-  order: 1; /* Move the text to the left */
+.stap p {
+  margin-top: 20px; /* Add some space between the image and text */
+}
+
+
+
+
+
+.box{
+  width: 100%;
+  height: 30px;
+  padding: 180px 30px;
+  color:white;
+  text-align:center;
+}
+
+.section-1{
+  height: 10vh;
+  background-image: url(img/seizoenen/lente.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.section-2{
+  background: #db6464;
+}
+
+.section-2 h2{
+  margin-top: -130px
+}
+
+.section-2 p{
+  margin: 20px;
+}
+
+.section-3{
+  height: 10vh;
+  background-image: url(img/seizoenen/zomer.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.section-4{
+  background: #db6464;
+}
+
+.section-4 h2{
+  margin-top: -130px
+}
+
+.section-4 p{
+  margin: 20px;
+}
+
+.section-5{
+  height: 10vh;
+  background-image: url(img/seizoenen/herfst.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.section-6{
+  background: #db6464;
+}
+
+.section-6 h2{
+  margin-top: -130px
+}
+
+.section-6 p{
+  margin: 20px;
+}
+
+.section-7{
+  background-image: url(img/seizoenen/winter.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.section-8{
+  background: #db6464;
+}
+
+.section-8 h2{
+  margin-top: -130px
+}
+
+.section-8 p{
+  margin: 20px;
+}
+
+footer {
+  padding-top: 150px;
+  text-align: center;
+  top: 0; 
+  left: 0;
+  right: 0;
+}
+
+footer img {
+  max-width: 200px; 
+  display: block; 
+  margin-top: -90px;
 }
